@@ -39,7 +39,7 @@ namespace SLNet
 				// RAND_screen() is only required on Windows - on Linux RAND_poll() will be used (called implicitly by the following RAND_bytes()-call) and
 				// provides OS-specific entropy quality.
 				// #high - replace with EGADS
-				RAND_screen();
+				RAND_poll(); // RAND_screen();
 #endif
 
 				if (RAND_bytes(m_sessionKey, EVP_MAX_KEY_LENGTH) == 0) {

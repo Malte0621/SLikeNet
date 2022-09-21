@@ -81,5 +81,5 @@ add_subdirectory(Lib)
 set(SLIKENET_COMMON_LIBS SLikeNetLibStatic)
 
 if(SLIKENET_ENABLE_SAMPLES)
-	add_subdirectory(Samples)
+	# add_subdirectory(Samples) # Commented out to prevent it the process from building samples, as they are currently broken.
 endif()
